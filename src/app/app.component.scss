@@ -2,6 +2,7 @@ $base-padding: 20px;
 $orange: #ffb461;
 $blue: #65a8fe;
 $green: #58deb6;
+$pink: #e46f83;
 
 .ng-wrapper {
     padding: $base-padding;
@@ -10,16 +11,15 @@ $green: #58deb6;
     .ng-container {
         .ng-main-content,
         .ng-sidebar {
+            height: 800px;
         }
         .ng-sidebar{
             background-color: #f4eeed;
             padding: $base-padding;
-            border-radius: 20px 0 0 20px;
         }
         .ng-main-content {
             background-color: #f8f6f6;
             padding: $base-padding; 
-            border-radius: 0 20px 20px 0;
         }
     }
    
