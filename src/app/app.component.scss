@@ -1,3 +1,4 @@
+// Variables
 $base-padding: 20px;
 $orange: #ffb461;
 $blue: #65a8fe;
@@ -5,6 +6,11 @@ $green: #58deb6;
 $pink: #e46f83;
 $lightgray: #f2f2f2;
 
+.material-icons {
+    vertical-align: middle;
+}
+
+// App Container
 .ng-wrapper {
     padding: $base-padding;
     background: white;
