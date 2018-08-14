@@ -1,4 +1,4 @@
 # Dashboard Application Built with Angular 6
 
-Programming project management dashboard with Angular 6 and Materialize CSS.
+Programming a project management application with Angular 6 and Materialize CSS.
 
