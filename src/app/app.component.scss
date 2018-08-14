@@ -1,0 +1,23 @@
+$base-padding: 20px;
+
+.ng-wrapper {
+    padding: $base-padding;
+    background: white;
+
+    .ng-container {
+        .ng-main-content,
+        .ng-sidebar {
+        }
+        .ng-sidebar{
+            background-color: #f4eeed;
+            padding: $base-padding;
+            border-radius: 20px 0 0 20px;
+        }
+        .ng-main-content {
+            background-color: #f8f6f6;
+            padding: $base-padding; 
+            border-radius: 0 20px 20px 0;
+        }
+    }
+   
+}
