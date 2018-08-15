@@ -40,3 +40,5 @@ Thumbs.db
 
 # Google API
 services/google/calendar/credentials.json
+services/google/calendar/token.json
+
