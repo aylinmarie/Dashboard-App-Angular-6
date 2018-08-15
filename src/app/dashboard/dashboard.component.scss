@@ -1,9 +1,9 @@
 @import "../app.component";
 
 .ng-cards {
-    background-color: white;
+    background-color: $white;
     padding: $base-padding;
-    border-radius: 10px;
+    box-shadow: none;
 
     .card-action {
         border-top: 1px solid $lightgray;
