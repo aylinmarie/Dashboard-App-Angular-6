@@ -7,7 +7,7 @@ import { ProjectsComponent }      from './projects/projects.component';
 
 
 const routes: Routes = [
-  { path: 'dashboard', component: DashboardComponent },
+  { path: '', component: DashboardComponent },
   { path: 'tasks', component: TasksComponent },
   { path: 'projects', component: ProjectsComponent },
 
