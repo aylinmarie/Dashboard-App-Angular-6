@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Project } from '../project';
-import { PROJECTS } from '../project-list';
+import { ProjectService } from '../services/project.service';
 
 @Component({
   selector: 'app-projects',
@@ -8,17 +9,26 @@ import { PROJECTS } from '../project-list';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-  projects = PROJECTS;
 
+  // Variables
   selectedProject: Project;
+  projects: Project[];
 
-  constructor() { }
+  constructor(private projectService: ProjectService) { }
 
   ngOnInit() {
+    this.getProjects();
   }
 
+  // View Project Data on Click
   onSelect(project: Project): void {
     this.selectedProject = project;
     console.log(this)
+  }
+
+  // Pull in Project Data
+  getProjects(): void {
+    this.projectService.getProjects()
+        .subscribe(projects => this.projects = projects);
   }
 }

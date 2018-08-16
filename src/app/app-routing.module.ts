@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'tasks', component: TasksComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'invoices', component: InvoiceComponent },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 
 ];
 
