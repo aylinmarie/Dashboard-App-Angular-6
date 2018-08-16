@@ -2,19 +2,21 @@
   <h1>Projects</h1>
   <div class="ng-project-list">
     <ul>
-      <li *ngFor="let project of projects"
-          [class.selected]="project === selectedProject"
-          (click)="onSelect(project)"
-        >{{project.name}}</li>
+      <li class="ng-project-item" *ngFor="let project of projects" [class.selected]="project === selectedProject" (click)="onSelect(project)">{{project.name}}</li>
     </ul>
+    <div class="ng-buttons">
+      <a class="waves-effect waves-light btn">
+        <i class="material-icons right">control_point</i>Add Project</a>
+    </div>
     <hr>
     <div *ngIf="selectedProject">
-        <label>name:
+      <h2>{{selectedProject.name}}</h2>
+      <p>
+        <strong>Scope:</strong> {{selectedProject.detail}}</p>
+      <!-- <label>name:
           <input [(ngModel)]="selectedProject.name" placeholder="name">
-        </label>
-      </div>
+        </label> -->
+    </div>
   </div>
-  <div class="ng-buttons">
-    <a class="waves-effect waves-light btn"><i class="material-icons right">control_point</i>Add Project</a>
-  </div>
+
 </div>
