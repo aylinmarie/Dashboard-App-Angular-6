@@ -1,5 +1,19 @@
 <div class="ng-title">
   <h1>Projects</h1>
+  <div class="ng-project-list">
+    <ul>
+      <li *ngFor="let project of projects"
+          [class.selected]="project === selectedProject"
+          (click)="onSelect(project)"
+        >{{project.name}}</li>
+    </ul>
+    <hr>
+    <div *ngIf="selectedProject">
+        <label>name:
+          <input [(ngModel)]="selectedProject.name" placeholder="name">
+        </label>
+      </div>
+  </div>
   <div class="ng-buttons">
     <a class="waves-effect waves-light btn"><i class="material-icons right">control_point</i>Add Project</a>
   </div>
