@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { InvoiceComponent } from './invoice/invoice.component';
 
 import { InMemoryDataService } from './in-memory-data.service';
+import { ProjectDetailComponent } from './project-detail/project-detail.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { InMemoryDataService } from './in-memory-data.service';
     DashboardComponent,
     TasksComponent,
     ProjectsComponent,
-    InvoiceComponent
+    InvoiceComponent,
+    ProjectDetailComponent
   ],
   imports: [
     BrowserModule,
