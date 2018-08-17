@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { Project } from '../project';
+import { ProjectService } from '../services/project.service';
+
 
 @Component({
   selector: 'app-project-detail',
@@ -11,10 +13,15 @@ export class ProjectDetailComponent implements OnInit {
 
   @Input() project: Project;
 
-  constructor() { }
+  constructor(private projectService: ProjectService) { }
 
   ngOnInit() {
 
   }
-
+  
+  // Pull Project Data by id
+  getProject(2): void {
+    this.projectService.getProject()
+        .subscribe(project => this.project = project);
+  }
 }
