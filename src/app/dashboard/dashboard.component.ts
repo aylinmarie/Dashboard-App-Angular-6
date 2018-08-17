@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Project } from '../project';
-import { PROJECTS } from '../project-list';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,7 +8,7 @@ import { PROJECTS } from '../project-list';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  projects = PROJECTS;
+  // projects = PROJECTS;
 
   constructor() { }
 
