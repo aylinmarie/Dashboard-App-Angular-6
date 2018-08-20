@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 import { Project } from '../project';
 import { ProjectService } from '../services/project.service';
@@ -13,15 +15,20 @@ export class ProjectDetailComponent implements OnInit {
 
   @Input() project: Project;
 
-  constructor(private projectService: ProjectService) { }
+  constructor(
+    private projectService: ProjectService,
+    private route: ActivatedRoute,
+    private location: Location) { }
 
   ngOnInit() {
-
+    this.getProject();
   }
   
   // Pull Project Data by id
-  getProject(2): void {
-    this.projectService.getProject()
+  getProject(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.projectService.getProject(id)
         .subscribe(project => this.project = project);
+        console.log(this)
   }
 }

@@ -1,4 +1,4 @@
-<div class="ng-title">
+<div class="ng-projects-wrap">
   <h1>Projects</h1>
   <div class="ng-project-list">
     <ul>
@@ -9,6 +9,10 @@
         <i class="material-icons right">control_point</i>Add Project</a>
     </div>
     <hr>
-    <app-project-detail [project]="selectedProject"></app-project-detail>
+    <div *ngIf="selectedProject">
+      <h2>{{selectedProject.name}}</h2>
+      <p><strong>Scope:</strong> {{selectedProject.detail}}</p>
+      <a routerLink="/projects/{{selectedProject.id}}" class="waves-effect waves-light btn">Edit this Project</a>
+    </div>
   </div>
 </div>
