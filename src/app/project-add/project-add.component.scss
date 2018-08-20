@@ -1,6 +1,9 @@
 @import "../app.component";
 
 .ng-project-add {
+    .ng-form {
+        margin-bottom: 30px;
+    }
     button {
         display: block;
         margin: 10px 0;
