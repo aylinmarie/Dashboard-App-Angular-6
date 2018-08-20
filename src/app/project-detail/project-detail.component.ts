@@ -31,4 +31,9 @@ export class ProjectDetailComponent implements OnInit {
         .subscribe(project => this.project = project);
         console.log(this)
   }
+
+  // Go Back Button
+  goBack(): void {
+    this.location.back();
+  }
 }

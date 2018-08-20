@@ -1,18 +1,26 @@
-<div class="ng-projects-wrap">
-  <h1>Projects</h1>
+<!-- Subnav and Action Buttons -->
+<div class="ng-buttons right-align">
+  <a class="waves-effect waves-light btn">
+    <i class="material-icons right">control_point</i>Add Project</a>
+</div>
+<h1>Projects</h1>
+<!-- Preloader -->
+<div *ngIf="!projects" class="ng-loader">
+  <div class="progress">
+    <div class="indeterminate"></div>
+  </div>
+</div>
+<!-- List of Projects -->
+<div class="ng-projects-wrap" *ngIf="projects">
   <div class="ng-project-list">
     <ul>
       <li class="ng-project-item" *ngFor="let project of projects" [class.selected]="project === selectedProject" (click)="onSelect(project)">{{project.name}}</li>
     </ul>
-    <div class="ng-buttons">
-      <a class="waves-effect waves-light btn">
-        <i class="material-icons right">control_point</i>Add Project</a>
-    </div>
-    <hr>
     <div *ngIf="selectedProject">
+      <hr>
       <h2>{{selectedProject.name}}</h2>
       <p><strong>Scope:</strong> {{selectedProject.detail}}</p>
-      <a routerLink="/projects/{{selectedProject.id}}" class="waves-effect waves-light btn">Edit this Project</a>
+      <a routerLink="/projects/{{selectedProject.id}}" class="waves-effect waves-light btn">View More</a>
     </div>
   </div>
 </div>
