@@ -6,6 +6,10 @@ import { Observable, of } from 'rxjs';
 
 import { Project } from '../project';
 
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
+
 @Injectable({
   providedIn: 'root'
 })
@@ -24,5 +28,10 @@ export class ProjectService {
   getProject(id: number): Observable<Project> {
     const url = `${this.projectsUrl}/${id}`;
     return this.http.get<Project>(url)
+  }
+
+  // ADD Project
+  addProject(project: Project): Observable<Project> {
+    return this.http.post<Project>(this.projectsUrl, project, httpOptions)
   }
 }

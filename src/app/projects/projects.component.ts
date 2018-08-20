@@ -32,4 +32,14 @@ export class ProjectsComponent implements OnInit {
     this.projectService.getProjects()
         .subscribe(projects => this.projects = projects);
   }
+
+  // ADD Project
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.projectService.addProject({ name } as Project)
+      .subscribe(project => {
+        this.projects.push(project);
+      });
+  }
 }

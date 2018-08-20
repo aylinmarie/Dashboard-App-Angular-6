@@ -2,6 +2,15 @@
 <div class="ng-buttons right-align">
   <a class="waves-effect waves-light btn">
     <i class="material-icons right">control_point</i>Add Project</a>
+    <div>
+        <label>Hero name:
+          <input #heroName />
+        </label>
+        <!-- (click) passes input value to add() and then clears the input -->
+        <button (click)="add(heroName.value); heroName.value=''">
+          add
+        </button>
+      </div>
 </div>
 <h1>Projects</h1>
 <!-- Preloader -->
