@@ -24,23 +24,12 @@ export class ProjectsComponent implements OnInit {
   // View Project Data on Click
   onSelect(project: Project): void {
     this.selectedProject = project;
-    console.log(this)
   }
 
   // Pull in Project Data
   getProjects(): void {
     this.projectService.getProjects()
-        .subscribe(projects => this.projects = projects);
-  }
-
-  // ADD Project
-  add(name: string): void {
-    name = name.trim();
-    if (!name) { return; }
-    this.projectService.addProject({ name } as Project)
-      .subscribe(project => {
-        this.projects.push(project);
-      });
+      .subscribe(projects => this.projects = projects);
   }
 
   // Delete Project
