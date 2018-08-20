@@ -34,4 +34,17 @@ export class ProjectService {
   addProject(project: Project): Observable<Project> {
     return this.http.post<Project>(this.projectsUrl, project, httpOptions)
   }
+
+  // Edit Project
+
+  // Save Project
+
+
+  // Delete Project
+  deleteProject (project: Project | number): Observable<Project> {
+    const id = typeof project === 'number' ? project : project.id;
+    const url = `${this.projectsUrl}/${id}`;
+  
+    return this.http.delete<Project>(url, httpOptions)
+  }
 }

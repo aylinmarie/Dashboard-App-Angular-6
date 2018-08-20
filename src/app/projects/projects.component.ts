@@ -42,4 +42,10 @@ export class ProjectsComponent implements OnInit {
         this.projects.push(project);
       });
   }
+
+  // Delete Project
+  delete(project: Project): void {
+    this.projects = this.projects.filter(p => p !== project);
+    this.projectService.deleteProject(project).subscribe();
+  }
 }
