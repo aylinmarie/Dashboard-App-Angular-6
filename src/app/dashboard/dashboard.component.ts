@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Project } from '../project';
+import { ProjectService } from '../services/project.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,11 +9,18 @@ import { Project } from '../project';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  // projects = PROJECTS;
+  projects: Project[];
 
-  constructor() { }
+  constructor(private projectService: ProjectService) { }
 
   ngOnInit() {
+    this.getProjects();
+  }
+
+  // Pull in Project Data
+  getProjects(): void {
+    this.projectService.getProjects()
+      .subscribe(projects => this.projects = projects);
   }
 
 }

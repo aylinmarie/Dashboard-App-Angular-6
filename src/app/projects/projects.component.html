@@ -1,7 +1,7 @@
 <!-- Subnav and Action Buttons -->
 <div class="ng-buttons right-align">
-  <a routerLink="/project/add" class="waves-effect waves-light btn">
-    <i class="material-icons right">control_point</i>Add Project</a>
+  <button routerLink="/project/add" class="waves-effect waves-light btn">
+    <i class="material-icons right">control_point</i>Add Project</button>
 </div>
 <h1>Projects</h1>
 <!-- Preloader -->
@@ -13,14 +13,17 @@
 <!-- List of Projects -->
 <div class="ng-projects-wrap" *ngIf="projects">
   <div class="ng-project-list">
-    <ul>
-        <li class="ng-project-item" *ngFor="let project of projects" [class.selected]="project === selectedProject" (click)="onSelect(project)">{{project.name}} | <span class="ng-delete" title="delete project" (click)="delete(project)">X</span></li>
-    </ul>
-    <div *ngIf="selectedProject">
-      <hr>
-      <h2>{{selectedProject.name}}</h2>
-      <p><strong>Scope:</strong> {{selectedProject.detail}}</p>
-      <a routerLink="/projects/{{selectedProject.id}}" class="waves-effect waves-light btn">View More</a>
+    <div class="col s12 m4 ng-project-item" *ngFor="let project of projects">
+      <div class="ng-cards card">
+        <div class="card-content">
+          <span class="card-title">{{project.name}}</span>
+          <p><strong>Brief:</strong> {{project.detail}}</p>
+        </div>
+        <div class="card-action">
+          <a routerLink="/projects/{{project.id}}">View More</a>
+          <a class="ng-delete" title="delete project" (click)="delete(project)">Remove</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>

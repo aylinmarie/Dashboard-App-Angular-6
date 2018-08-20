@@ -7,7 +7,7 @@
       <div class="card-content">
         <span class="card-title">Active Projects</span>
         <ul>
-          <li *ngFor="let project of projects"><i class="material-icons" style="font-size: 16px;">attach_file</i> {{project.name}}</li>
+          <li *ngFor="let project of projects | slice:0:3;"><i class="material-icons" style="font-size: 16px;">attach_file</i> <a routerLink="projects/{{project.id}}">{{project.name}}</a></li>
         </ul>
       </div>
       <div class="card-action">

@@ -9,12 +9,14 @@
     .ng-project-item {
         padding: 10px;
 
-        &:hover {
-            cursor: pointer;
-        }
-
         .ng-delete {
-            color: red;
+            color: $pink !important;
+            position: absolute;
+            right: 0px;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
     .selected {
