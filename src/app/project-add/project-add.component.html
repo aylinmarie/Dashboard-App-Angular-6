@@ -1,10 +1,14 @@
-<div>
-    <label>Hero name:
-      <input #heroName />
+<div class="ng-project-add">
+  <h2>Add a New Project</h2>
+  <label>Project Name:
+    <input #projectName />
+  </label>
+  <label>Project Description:
+      <input #projectDetail />
     </label>
-    <!-- (click) passes input value to add() and then clears the input -->
-    <button (click)="add(heroName.value); heroName.value=''">
-      add
-    </button>
-  </div>
-  
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button class="waves-effect waves-light btn" (click)="add(projectName.value, projectDetail.value); projectName.value=''">
+    <i class="material-icons right">control_point</i>Add Project
+  </button>
+  <button (click)="goBack()" class="waves-effect waves-light red btn"><i class="material-icons left">arrow_back</i> Go Back</button>
+</div>

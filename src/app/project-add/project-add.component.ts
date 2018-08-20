@@ -29,10 +29,13 @@ export class ProjectAddComponent implements OnInit {
   }
 
   // ADD Project
-  add(name: string): void {
+  add(name: string, detail: string): void {
     name = name.trim();
+    detail = detail.trim();
     if (!name) { return; }
-    this.projectService.addProject({ name } as Project)
+    if (!detail) { return; }
+
+    this.projectService.addProject({ name, detail } as Project)
       .subscribe(project => {
         this.projects.push(project);
       });

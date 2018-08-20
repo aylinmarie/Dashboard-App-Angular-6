@@ -14,8 +14,7 @@
 <div class="ng-projects-wrap" *ngIf="projects">
   <div class="ng-project-list">
     <ul>
-        <li class="ng-project-item" *ngFor="let project of projects" [class.selected]="project === selectedProject" (click)="onSelect(project)">{{project.name}} | <span class="ng-delete" title="delete project"
-          (click)="delete(project)">Delete</span></li>
+        <li class="ng-project-item" *ngFor="let project of projects" [class.selected]="project === selectedProject" (click)="onSelect(project)">{{project.name}} | <span class="ng-delete" title="delete project" (click)="delete(project)">X</span></li>
     </ul>
     <div *ngIf="selectedProject">
       <hr>

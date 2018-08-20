@@ -12,6 +12,10 @@
         &:hover {
             cursor: pointer;
         }
+
+        .ng-delete {
+            color: red;
+        }
     }
     .selected {
         background: $white;
