@@ -23,7 +23,7 @@ export class ProjectDetailComponent implements OnInit {
   ngOnInit() {
     this.getProject();
   }
-  
+
   // Pull Project Data by id
   getProject(): void {
     const id = +this.route.snapshot.paramMap.get('id');

@@ -21,30 +21,29 @@ export class ProjectService {
 
   // GET All Project Data
   getProjects(): Observable<Project[]> {
-    return this.http.get<Project[]>(this.projectsUrl)
+    return this.http.get<Project[]>(this.projectsUrl);
   }
 
-  // GET Project by id. 
+  // GET Project by id.
   getProject(id: number): Observable<Project> {
     const url = `${this.projectsUrl}/${id}`;
-    return this.http.get<Project>(url)
+    return this.http.get<Project>(url);
   }
 
   // ADD Project
   addProject(project: Project): Observable<Project> {
-    return this.http.post<Project>(this.projectsUrl, project, httpOptions)
+    return this.http.post<Project>(this.projectsUrl, project, httpOptions);
   }
 
   // Edit Project
 
   // Save Project
 
-
   // Delete Project
   deleteProject (project: Project | number): Observable<Project> {
     const id = typeof project === 'number' ? project : project.id;
     const url = `${this.projectsUrl}/${id}`;
-  
+
     return this.http.delete<Project>(url, httpOptions);
   }
 }
