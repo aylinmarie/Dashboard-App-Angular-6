@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,700');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700');
-
 // Variables
 $base-padding: 20px;
 $orange: #ffab40;
@@ -10,69 +9,118 @@ $pink: #e46f83;
 $lightgray: #f2f2f2;
 $gray: #666;
 $white: #fdfdfd;
-
 // Typography
 .raleway {
-    font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 .opensans {
-    font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body {
-    @extend .opensans;
-    font-size: 13px;
-    line-height: 24px;
-    color: $gray;
+  @extend .opensans;
+  font-size: 13px;
+  line-height: 24px;
+  color: $gray;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    @extend .raleway;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend .raleway;
 }
 
-h1, h2 {
-    font-weight: 100;
+h1,
+h2 {
+  font-weight: 100;
 }
 
 h4 {
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 h5 {
-    letter-spacing: 2px;
-    font-weight: 400;
-    text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 p {
-    @extend .opensans;
-    font-weight: 400;
+  @extend .opensans;
+  font-weight: 400;
 }
 
 // General Styles
 .material-icons {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 // App Container
 .ng-wrapper {
-    .ng-container {
-        margin-bottom: 0;
-        .ng-main-content,
-        .ng-sidebar {
-            min-height: 100vh;
-            overflow: hidden;
-        }
-        .ng-sidebar{
-            padding: $base-padding;
-        }
-        .ng-main-content {
-            background-color: $lightgray;
-            padding: $base-padding; 
-        }
+  .ng-container {
+    margin-bottom: 0;
+    .ng-main-content,
+    .ng-sidebar {
+      min-height: 100vh;
+      overflow: hidden;
     }
-   
+    .ng-sidebar {
+      padding: $base-padding;
+    }
+    .ng-main-content {
+      background-color: $lightgray;
+      padding: $base-padding;
+    }
+  }
+}
+
+.ng-cards {
+  box-shadow: none;
+  .card-content {
+    .card-title {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+    }
+    p {
+      font-size: 13px;
+      line-height: 24px;
+      color: $gray;
+    }
+  }
+  .card-action {
+    display: flex;
+    align-items: center;
+    .ng-view-more {
+      border: 2px solid $green;
+      padding: 0px 20px;
+      line-height: 36px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: $green;
+      text-align: center;
+      transition: all 0.3s ease;
+      &:hover {
+        background: $green;
+        color: white;
+      }
+    }
+    .ng-delete {
+      color: $pink !important;
+      position: absolute;
+      right: 0px;
+      font-size: 12px;
+      &:hover {
+        cursor: pointer;
+        border-bottom: 1px solid $pink;
+      }
+    }
+  }
 }
