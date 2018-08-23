@@ -15,6 +15,7 @@ import { InvoiceComponent } from './invoice/invoice.component';
 import { InMemoryDataService } from './in-memory-data.service';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { ProjectAddComponent } from './project-add/project-add.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ProjectAddComponent } from './project-add/project-add.component';
     ProjectsComponent,
     InvoiceComponent,
     ProjectDetailComponent,
-    ProjectAddComponent
+    ProjectAddComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -43,4 +45,4 @@ import { ProjectAddComponent } from './project-add/project-add.component';
   providers: [InMemoryDataService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

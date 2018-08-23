@@ -45,6 +45,6 @@ export class ProjectService {
     const id = typeof project === 'number' ? project : project.id;
     const url = `${this.projectsUrl}/${id}`;
   
-    return this.http.delete<Project>(url, httpOptions)
+    return this.http.delete<Project>(url, httpOptions);
   }
 }
