@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700');
+
 // Variables
 $base-padding: 20px;
 $orange: #ffab40;
@@ -5,13 +8,51 @@ $blue: #65a8fe;
 $green: #2bbbad;
 $pink: #e46f83;
 $lightgray: #f2f2f2;
-$gray: #eee;
+$gray: #666;
 $white: #fdfdfd;
 
-// General Styles
-a {
-    color: $green;
+// Typography
+.raleway {
+    font-family: 'Raleway', sans-serif;
 }
+
+.opensans {
+    font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    @extend .opensans;
+    font-size: 13px;
+    line-height: 24px;
+    color: $gray;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @extend .raleway;
+}
+
+h1, h2 {
+    font-weight: 100;
+}
+
+h4 {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+h5 {
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+p {
+    @extend .opensans;
+    font-weight: 400;
+}
+
+// General Styles
 .material-icons {
     vertical-align: middle;
 }

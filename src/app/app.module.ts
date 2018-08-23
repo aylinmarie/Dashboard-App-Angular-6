@@ -10,7 +10,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { AppRoutingModule } from './app-routing.module';
-import { InvoiceComponent } from './invoice/invoice.component';
 
 import { InMemoryDataService } from './in-memory-data.service';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
@@ -25,7 +24,6 @@ import { LoginComponent } from './login/login.component';
     DashboardComponent,
     TasksComponent,
     ProjectsComponent,
-    InvoiceComponent,
     ProjectDetailComponent,
     ProjectAddComponent,
     LoginComponent
