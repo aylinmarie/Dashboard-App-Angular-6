@@ -51,9 +51,10 @@ h5 {
   text-transform: uppercase;
 }
 
-p {
+p, li {
   @extend .opensans;
   font-weight: 400;
+  font-size: 13px;
 }
 
 // General Styles
@@ -89,7 +90,6 @@ p {
       font-weight: 400;
     }
     p {
-      font-size: 13px;
       line-height: 24px;
       color: $gray;
     }

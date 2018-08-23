@@ -1,2 +1,26 @@
 @import "../app.component";
+.ng-today {
+  border-bottom: 2px solid $green;
+  padding-bottom: 3px;
+}
 
+.ng-project-list {
+  .ng-project-item {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    color: $green;
+    transition: all .3s ease;
+    font-size: 13px;
+    line-height: 24px;
+
+    &:hover {
+      background: $lightgray;
+      cursor: pointer;
+    }
+    i {
+        color: black;
+        padding-right: 5px;
+    }
+  }
+}

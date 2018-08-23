@@ -10,6 +10,11 @@ import { ProjectService } from '../services/project.service';
 })
 export class DashboardComponent implements OnInit {
   projects: Project[];
+  today = new Date();
+  dd = this.today.getDate();
+  mm = this.today.getMonth() + 1;
+  yyyy = this.today.getFullYear();
+  fullDate = this.mm + '.' + this.dd + '.' + this.yyyy;
 
   constructor(private projectService: ProjectService) { }
 
@@ -22,5 +27,4 @@ export class DashboardComponent implements OnInit {
     this.projectService.getProjects()
       .subscribe(projects => this.projects = projects);
   }
-
 }

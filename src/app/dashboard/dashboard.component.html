@@ -5,9 +5,9 @@
   <div class="col s12">
     <div class="ng-cards card">
       <div class="card-content">
-        <h5 class="card-title">Active Projects</h5>
-        <ul>
-          <li *ngFor="let project of projects | slice:0:3;"><i class="material-icons" style="font-size: 16px;">attach_file</i> <a routerLink="projects/{{project.id}}">{{project.name}}</a></li>
+        <h5 class="card-title">Active Projects as of <span class="ng-today">{{fullDate}}</span></h5>
+        <ul class="ng-project-list">
+          <li class="ng-project-item" *ngFor="let project of projects | slice:0:3;" routerLink="projects/{{project.id}}"><i class="material-icons" style="font-size: 16px;">attach_file</i>{{project.name}}</li>
         </ul>
       </div>
       <div class="card-action">
@@ -39,8 +39,6 @@
     <div class="ng-cards card">
       <div class="card-content">
         <h5 class="card-title">Calendar</h5>
-        <p>I am a very simple card. I am good at containing small bits of information.
-        I am convenient because I require little markup to use effectively.</p>
       </div>
     </div>
   </div>
