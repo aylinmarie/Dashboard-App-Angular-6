@@ -104,12 +104,12 @@ p {
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 1px;
-      color: $green;
+      color: $green !important;
       text-align: center;
       transition: all 0.3s ease;
       &:hover {
         background: $green;
-        color: white;
+        color: white !important;
       }
     }
     .ng-delete {
