@@ -60,12 +60,13 @@ p {
 // App Container
 .ng-wrapper {
     .ng-container {
+        margin-bottom: 0;
         .ng-main-content,
         .ng-sidebar {
-            height: 800px;
+            min-height: 100vh;
+            overflow: hidden;
         }
         .ng-sidebar{
-            background-color: $white;;
             padding: $base-padding;
         }
         .ng-main-content {
