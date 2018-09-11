@@ -3,5 +3,5 @@
 Programming a project management application with Angular 6 and Materialize CSS.
 
 ## Phase 1 of Application
-![Phase 1 Image - Dashboard](/images/dashboardph1.png)
-![Phase 1 Image - Projects](/images/projectsph1.png)
+![Phase 1 Image - Dashboard](https://github.com/aylinmarie/Dashboard-App-Angular-6/blob/master/src/assets/images/dashboardph1.png)
+![Phase 1 Image - Projects](https://github.com/aylinmarie/Dashboard-App-Angular-6/blob/master/src/assets/images/projectsph1.png)
