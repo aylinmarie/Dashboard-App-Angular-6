@@ -14,7 +14,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { InMemoryDataService } from './in-memory-data.service';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { ProjectAddComponent } from './project-add/project-add.component';
-import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -26,7 +25,6 @@ import { LoginComponent } from './login/login.component';
     ProjectsComponent,
     ProjectDetailComponent,
     ProjectAddComponent,
-    LoginComponent
   ],
   imports: [
     BrowserModule,
