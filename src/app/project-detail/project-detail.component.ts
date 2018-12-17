@@ -24,6 +24,11 @@ export class ProjectDetailComponent implements OnInit {
     this.getProject();
   }
 
+  // Go Back Button
+  goBack(): void {
+    this.location.back();
+  }
+
   // Pull Project Data by id
   getProject(): void {
     const id = +this.route.snapshot.paramMap.get('id');
@@ -31,8 +36,9 @@ export class ProjectDetailComponent implements OnInit {
         .subscribe(project => this.project = project);
   }
 
-  // Go Back Button
-  goBack(): void {
-    this.location.back();
+  // Delete Project
+  delete(project: Project): void {
+    this.projectService.deleteProject(project).subscribe();
+    this.goBack();
   }
 }
