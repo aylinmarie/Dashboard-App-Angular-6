@@ -6,9 +6,6 @@ import { TasksComponent } from './tasks/tasks.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectAddComponent } from './project-add/project-add.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
-import { LoginComponent } from './login/login.component';
-
-
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -16,7 +13,6 @@ const routes: Routes = [
   { path: 'projects', component: ProjectsComponent },
   { path: 'project/add', component: ProjectAddComponent },
   { path: 'projects/:id', component: ProjectDetailComponent },
-  { path: 'login', component: LoginComponent },
 
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 
