@@ -17,3 +17,13 @@
     color: $green;
   }
 }
+.ng-delete {
+  color: $pink !important;
+  position: absolute;
+  right: 0px;
+  font-size: 12px;
+  &:hover {
+    cursor: pointer;
+    border-bottom: 1px solid $pink;
+  }
+}

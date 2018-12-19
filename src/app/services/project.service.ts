@@ -35,7 +35,10 @@ export class ProjectService {
     return this.http.post<Project>(this.projectsUrl, project, httpOptions);
   }
 
-  // Edit Project
+  // Active Project
+  updateProject (project: Project): Observable<Project> {
+    return this.http.put<Project>(this.projectsUrl, project, httpOptions)
+  }
 
   // Save Project
 

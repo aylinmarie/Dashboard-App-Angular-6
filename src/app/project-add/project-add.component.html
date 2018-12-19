@@ -10,7 +10,7 @@
   </div>
 
   <!-- (click) passes input value to add() and then clears the input -->
-  <button class="waves-effect waves-light btn" (click)="add(projectName.value, projectDetail.value); projectName.value=''">
+  <button class="waves-effect waves-light btn" (click)="add(projectName.value, projectDetail.value, true); projectName.value=''">
     <i class="material-icons right">control_point</i>Add Project
   </button>
   <button (click)="goBack()" class="waves-effect waves-light red btn"><i class="material-icons left">arrow_back</i> Go Back</button>

@@ -14,6 +14,7 @@ import { ProjectService } from '../services/project.service';
 export class ProjectDetailComponent implements OnInit {
 
   @Input() project: Project;
+  isActive;
 
   constructor(
     private projectService: ProjectService,
@@ -33,12 +34,24 @@ export class ProjectDetailComponent implements OnInit {
   getProject(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.projectService.getProject(id)
-        .subscribe(project => this.project = project);
-  }
+        .subscribe((data) => {
+          this.project = data;
+          this.project.active ? this.isActive = 'Active' : this.isActive = 'Completed';
+          console.log(this.project.active);
+        })
+  };
 
   // Delete Project
   delete(project: Project): void {
     this.projectService.deleteProject(project).subscribe();
     this.goBack();
+  }
+
+  // Toggle Active Project
+  activeProject(active: boolean): void {
+    this.projectService.updateProject({ active } as Project)
+      .subscribe(project => {
+        this.project.active = active;
+      });
   }
 }

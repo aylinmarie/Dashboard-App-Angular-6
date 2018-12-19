@@ -58,6 +58,9 @@ p, li {
 }
 
 // General Styles
+a:hover {
+  cursor: pointer;
+}
 .material-icons {
   vertical-align: middle;
 }
@@ -113,16 +116,6 @@ p, li {
       &:hover {
         background: $green;
         color: white !important;
-      }
-    }
-    .ng-delete {
-      color: $pink !important;
-      position: absolute;
-      right: 0px;
-      font-size: 12px;
-      &:hover {
-        cursor: pointer;
-        border-bottom: 1px solid $pink;
       }
     }
   }

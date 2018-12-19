@@ -1,1 +1,28 @@
 @import "../app.component";
+
+.amd-project-detail-wrapper {
+  padding: 20px;
+
+  .ng-active-project,
+  .ng-complete-project {
+    border: 1px solid #ccc;
+    padding: 15px;
+    font-weight: 600;
+  }
+  .ng-complete-project {
+    color: $green;
+  }
+  .ng-active-project {
+    color: $pink;
+  }
+
+  .ng-delete {
+    color: $pink !important;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    &:hover {
+      border-bottom: 1px solid $pink;
+    }
+  }
+}
