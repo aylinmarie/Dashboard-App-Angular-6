@@ -16,7 +16,8 @@ export class DashboardComponent implements OnInit {
   yyyy = this.today.getFullYear();
   fullDate = this.mm + '.' + this.dd + '.' + this.yyyy;
 
-  constructor(private projectService: ProjectService) { }
+  constructor(private projectService: ProjectService) { 
+  }
 
   ngOnInit() {
     this.getProjects();
@@ -25,6 +26,9 @@ export class DashboardComponent implements OnInit {
   // Pull in Project Data
   getProjects(): void {
     this.projectService.getProjects()
-      .subscribe(projects => this.projects = projects);
+      .subscribe((data) => {
+            this.projects = data;
+            console.log(this.projects)
+         });
   }
 }
