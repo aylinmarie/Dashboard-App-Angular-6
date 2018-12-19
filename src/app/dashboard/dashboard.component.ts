@@ -10,6 +10,7 @@ import { ProjectService } from '../services/project.service';
 })
 export class DashboardComponent implements OnInit {
   projects: Project[];
+  activeProjects = [];
   today = new Date();
   dd = this.today.getDate();
   mm = this.today.getMonth() + 1;
@@ -28,7 +29,13 @@ export class DashboardComponent implements OnInit {
     this.projectService.getProjects()
       .subscribe((data) => {
             this.projects = data;
-            console.log(this.projects)
+
+            // Identify Active Projects
+            for(let project of this.projects) {
+              if(project.active == true) {
+                this.activeProjects.push(project);
+              }
+            }
          });
   }
 }
